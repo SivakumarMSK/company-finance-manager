@@ -1,0 +1,14 @@
+/* Home Page Styling */
+.home-con {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the screen */
+    width:100vw; /* Full width */
+    padding: 20px;
+    background-image: url('/src/assets/login.jpg'); /* Add your image URL here */
+    background-size: cover; /* Make sure the image covers the entire area */
+    background-position: center; /* Center the image */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}

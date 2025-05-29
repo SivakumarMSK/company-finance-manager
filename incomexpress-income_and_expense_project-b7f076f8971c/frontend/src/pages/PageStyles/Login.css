@@ -1,0 +1,84 @@
+/* Login page container styling */
+.login-con {
+    background: rgba(169, 169, 169, 0.8); /* Dark gray with 80% opacity */
+ /* Semi-transparent white background */
+    backdrop-filter: blur(2px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+    max-width: 400px; /* Limit max width for the form */
+    display: flex;
+    flex-direction:column;
+    justify-content: center; /* Align content vertically */
+    align-items: center; /* Center items horizontally */
+    height: 55vh;
+}
+
+.login-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: none;
+    
+}
+/* Title styling */
+.login-con h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    
+}
+
+/* Input field styling */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Focused input field styling */
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+ }
+
+/* Hover effect on the button */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 500px) {
+    .login-con {
+        padding: 20px;
+    }
+
+    .login-con h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}

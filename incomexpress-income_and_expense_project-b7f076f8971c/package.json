@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
+    "react-calendar": "^5.1.0",
+    "react-datepicker": "^8.0.0",
+    "sweetalert2": "^11.17.2",
+    "vite": "^6.0.7"
+  }
+}

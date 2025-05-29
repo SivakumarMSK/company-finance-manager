@@ -1,0 +1,232 @@
+/* Container */
+
+.title {
+    font-size: 40px;
+    color: #333;
+}
+
+.search-container {
+    position: relative;
+    width: 30%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 35px 10px 10px; /* Space for the icon on the right */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px; /* Position icon inside the input */
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    pointer-events: none; /* Prevent click on the icon */
+}
+
+
+
+.expense-cont {
+    width: 100%;
+    max-width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 23%;
+}
+
+/* Form Styles - Stays Fixed */
+.expenseform {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+    background-image: url('/src/assets/form.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Inputs and Select */
+.expenseform input, 
+.expenseform select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Expense Table Scrollable */
+.expense-table-container {
+    max-height: 300px;  /* Set scroll height */
+    overflow-y: auto;   /* Enable vertical scroll */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Table Styling */
+.expense-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expense-table th, 
+.expense-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.expense-table th {
+    background-color: rgb(175, 5, 175);
+    color: white;
+}
+
+.expense-table tbody tr:nth-child(even) {
+    background-color: #f9c1f1;
+}
+
+.expense-table tbody tr:nth-child(even):hover{
+    background-color: #f0e1ed;
+    cursor: pointer;
+  }
+
+/* Action Buttons */
+.edit, .delete {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.edit {
+    color: green;
+    margin-right: 10px;
+}
+
+.delete {
+    color: red;
+}
+
+.scroll-top-btn{
+    width: 80px;
+}
+
+/* Suggestions Dropdown */
+.suggestions-list {
+    position: absolute;
+    width: 16%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    padding: 0;
+    margin-top: 5px;
+    list-style: none; /* Removes dot from list */
+}
+
+.suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background: #f0f0f0;
+}
+button{
+    background-color: rgb(45, 4, 83);
+}
+button:hover{
+    background-color: blueviolet;
+}
+.swal2-actions-custom {
+    display: flex !important;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+    flex-wrap: nowrap;
+  }
+  
+  .swal2-button-custom {
+    min-width: 120px !important; /* Set minimum width for buttons */
+    white-space: nowrap !important; /* Prevent text from wrapping */
+  }
+
+
+/* RESPONSIVE DESIGN - Mobile & Tablet */
+@media (max-width: 1024px) {
+    .expense-cont {
+        max-width: 85%;
+        margin-left: 7%;
+        padding: 15px;
+    }
+    
+    .expenseform {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .expenseform input, 
+    .expenseform select {
+        width: 100%;
+    }
+
+    .expense-table-container {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .expense-cont {
+        max-width: 90%;
+        margin-left: 5%;
+    }
+
+    .expenseform {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .expense-table-container {
+        max-height: 200px;
+    }
+
+    .expense-table th, 
+    .expense-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .expense-cont {
+        max-width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .expenseform {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .expense-table-container {
+        max-height: 180px;
+    }
+
+    .expense-table th, 
+    .expense-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .edit, .delete {
+        font-size: 16px;
+    }
+}

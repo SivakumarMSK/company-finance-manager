@@ -1,0 +1,247 @@
+/* Main Container */
+.client-container {
+    width: calc(100% - 250px); /* Adjust width considering sidebar */
+    margin-left: 250px; /* Push content to the right */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Header Section */
+  .client-head ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .add-client {
+    background-color: purple;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-client:hover {
+    background-color:  rgb(175, 5, 175);
+  }
+  
+  /* Top Bar */
+  .top-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  .search-box {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  .import-button {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  /* ==== Client Table Styling ==== */
+  
+  /* Table Wrapper - Enables Scrolling */
+  .client-table-wrapper {
+    max-height: 400px; /* Limit table height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative;
+    border: 1px solid #ddd;
+  }
+  
+  /* Table */
+  .client-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Table Head - Fixed */
+  .client-table thead {
+    position: sticky;
+    top: 0;
+    background-color:  rgb(175, 5, 175);
+    color: white;
+    z-index: 100; /* Lower z-index to stay behind modal */
+  }
+  
+  /* Table Header & Cells */
+  .client-table th, .client-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;
+  }
+  
+  .client-table th {
+    background-color:  rgb(175, 5, 175);
+    color: white;
+    font-weight: bold;
+  }
+  .client-table tbody tr:nth-child(even) {
+    background-color: #f9c1f1;
+  }
+  
+  .client-table tbody tr:nth-child(even):hover{
+    background-color: #f0e1ed;
+    cursor: pointer;
+  }
+  
+  /* ==== Modal Styling (Fix for Table Overlay Issue) ==== */
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ensure it covers the entire viewport */
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999; /* Higher than table header */
+  }
+  
+  /* Modal Content - Increased Height */
+  .modal-content {
+    background: url('/src/assets/form.jpg') no-repeat center center;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    height: 70vh; /* Increase height to 80% of viewport */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 99999; /* Ensure it appears above everything */
+  }
+  
+  /* Form Layout */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    flex: 1;
+    min-width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .form-control {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Modal Buttons */
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .save-button {
+    background-color: rgb(45, 4, 83);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    background-color: purple;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .swal2-actions-custom {
+    display: flex !important;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+    flex-wrap: nowrap;
+  }
+  
+  .swal2-button-custom {
+    min-width: 120px !important; /* Set minimum width for buttons */
+    white-space: nowrap !important; /* Prevent text from wrapping */
+  }
+  
+  
+  /* ==== MEDIA QUERIES ==== */
+  @media (max-width: 768px) {
+    .client-container {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .client-head ul, .top-bar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .search-box, .import-button {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .client-table th, .client-table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    /* Modal Responsive */
+    .modal-content {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .row {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .form-group {
+      min-width: 100%;
+    }
+  
+    .modal-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

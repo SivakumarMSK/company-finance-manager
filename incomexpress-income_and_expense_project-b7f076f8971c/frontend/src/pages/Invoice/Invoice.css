@@ -1,0 +1,208 @@
+/* Main Invoice Container */
+.invoice-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
+  font-family: "Arial", sans-serif;
+  margin-left: 30%;
+  margin-top: 20px;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 550px;
+  
+}
+
+/* Invoice Header */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.invoice-header h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+}
+
+.invoice-header p {
+  font-size: 16px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Invoice Details - Name Left, Status Right */
+.invoice-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Left Side */
+.invoice-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.invoice-info p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #444;
+}
+
+/* Right Side - Status */
+.status-container {
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5%;
+}
+
+.paid {
+  color: green;
+}
+
+.unpaid {
+  color: red;
+}
+
+/* Invoice Table */
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.invoice-table th, 
+.invoice-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.invoice-table th {
+  
+  color: purple;
+  font-weight: bold;
+}
+
+.invoice-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.invoice-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Print Button */
+.print-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto;
+  background: purple;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.print-button:hover {
+  background: rgb(93, 2, 93);
+}
+.invoice-input-container{
+width: 100%;
+
+max-width: 800px;
+margin-left: 30%;
+margin-bottom: 10px;
+}
+.invoice-fetch-button
+{
+  color: white;
+  background-color: purple;
+}
+.invoice-fetch-button:hover{
+  background-color: rgb(88, 2, 88);
+}
+.invoice-error{
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 30%;
+}
+/* Extra Large Screens (Large Monitors, 4K Displays) */
+@media (min-width: 1600px) {
+  .sturep-cont {
+    max-width: 1400px;
+    margin-left: 250px;
+  }
+}
+
+/* Large Laptops & Desktops (Standard Screens) */
+@media (min-width: 1366px) and (max-width: 1599px) {
+  .sturep-cont {
+    max-width: 1250px;
+    margin-left: 230px;
+  }
+}
+
+/* Medium-Sized Laptops */
+@media (min-width: 1200px) and (max-width: 1365px) {
+  .sturep-cont {
+    max-width: 1150px; /* Same as your default */
+    margin-left: 215px;
+  }
+}
+
+/* Small Laptops & Larger Tablets */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sturep-cont {
+    max-width: 1000px;
+    margin-left: 200px;
+  }
+
+  .sturep-search-container .sturep-search-box {
+    width: 230px;
+  }
+}
+
+/* Standard Tablets & Small Screens (Without Changing Defaults) */
+@media (max-width: 991px) {
+  .sturep-cont {
+    max-width: 95%;
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .sturep-top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sturep-search-container {
+    width: 100%;
+  }
+
+  .sturep-search-box {
+    width: 100%;
+  }
+
+  .sturep-download-button {
+    width: 100%;
+  }
+}
