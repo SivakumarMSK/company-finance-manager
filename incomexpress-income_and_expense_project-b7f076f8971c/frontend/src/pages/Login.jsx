@@ -11,7 +11,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     
     const handleLogin = async () => {
-        const response  = await axios.post('http://localhost:3001/admin/login', {uname, password});
+        const response  = await axios.post('https://company-finance-manager-api.vercel.app/admin/login', {uname, password});
         if(response.data.success){
             //alert('Login Successfull')
             Swal.fire({
