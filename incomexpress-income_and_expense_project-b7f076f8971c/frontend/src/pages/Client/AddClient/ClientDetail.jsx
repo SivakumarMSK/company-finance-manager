@@ -65,7 +65,7 @@ function ClientDetail() {
     e.preventDefault();
     if (!validateForm()) return;
     try {
-      const response = await axios.post("http://localhost:3001/client/addclient", formData);
+      const response = await axios.post("https://company-finance-manager-api.vercel.app/client/addclient", formData);
       if (response.status === 201) {
         // alert("Successfully submitted");
                Swal.fire({
