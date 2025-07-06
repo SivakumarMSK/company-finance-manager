@@ -13,7 +13,11 @@ const cors = require('cors');
 app.use(express.json());
 app.use(bodyParser.json());
 dotenv.config();
-app.use(cors())
+app.use(cors({
+  origin: "https://company-finance-manager-client.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 //database connection code moved to backend/config/db.js
 const connectDB = require("./config/db");
